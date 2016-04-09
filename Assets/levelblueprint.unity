@@ -912,6 +912,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11494182, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
+      propertyPath: Kabbuuum
+      value: 
+      objectReference: {fileID: 119712, guid: 49d129603adc5ac419a7d08ecc37a596, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
   m_IsPrefabParent: 0
@@ -1006,7 +1010,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 497412, guid: 0135cac230f48ac4cb5cae47b23f5b27, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.2858621
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 497412, guid: 0135cac230f48ac4cb5cae47b23f5b27, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1042,7 +1046,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 497412, guid: 0135cac230f48ac4cb5cae47b23f5b27, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3.5344129
+      value: 2.626806
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0135cac230f48ac4cb5cae47b23f5b27, type: 2}
@@ -1176,6 +1180,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11492016, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
+      propertyPath: Kabbuuum
+      value: 
+      objectReference: {fileID: 163800, guid: bb7106e89bdf8e948a8cc9d0b8ed5a2d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
   m_IsPrefabParent: 0
@@ -1307,6 +1315,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11493504, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
+      propertyPath: Kabbuuum
+      value: 
+      objectReference: {fileID: 117596, guid: 94d4fdc555c114e41a55139c91b50147, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
   m_IsPrefabParent: 0
@@ -1377,6 +1389,10 @@ Prefab:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11415504, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
+      propertyPath: Kabbuuum
+      value: 
+      objectReference: {fileID: 115564, guid: 9028cab244eb8894e9800dda385419b3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
   m_IsPrefabParent: 0
@@ -4047,8 +4063,8 @@ Transform:
   m_PrefabInternal: {fileID: 433995718}
   m_GameObject: {fileID: 1842959300}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 0.015, y: 1.2858621, z: 0}
-  m_LocalScale: {x: 3.5344129, y: 0.29321808, z: 1}
+  m_LocalPosition: {x: 0.015, y: 1.7, z: 0}
+  m_LocalScale: {x: 2.626806, y: 0.29321808, z: 1}
   m_Children: []
   m_Father: {fileID: 915105780}
   m_RootOrder: 0

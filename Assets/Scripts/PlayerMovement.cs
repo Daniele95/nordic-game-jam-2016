@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject Graphics;
     [SerializeField]
+    private GameObject Kabbuuum;
+    [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
@@ -203,7 +205,7 @@ public class PlayerMovement : MonoBehaviour {
         //g.transform.LookAt(transform.position + transform.forward * 5);
         Wisp other = (Wisp)g.GetComponent(typeof(Wisp));
         other.setColor(ControllerID);
-        other.setNW(NeutrualWisp);
+        other.setNW(NeutrualWisp, Kabbuuum);
         ammo--;
         UpdateAmmoCount();
     }

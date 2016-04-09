@@ -7,6 +7,7 @@ public class Wisp : MonoBehaviour {
     private int color = 0;
     Material newMaterial;
     AudioSource audio;
+    GameObject Booom;
 
     public static AudioClip[] RandomAudioClips = new AudioClip[3];
 
@@ -57,10 +58,10 @@ public class Wisp : MonoBehaviour {
         }
     }
 
-    public void setNW(GameObject g)
+    public void setNW(GameObject g, GameObject buum)
     {
         NeutrualWisp = g;
-
+        Booom = buum;
     }
 
     void OnTriggerEnter(Collider collision)
@@ -74,6 +75,8 @@ public class Wisp : MonoBehaviour {
 
         SoundManager_01 asd = new SoundManager_01();
         //asd.PlayRandomSound(0.85f, 1.15f, 0.7f, 1.3f, RandomAudioClips);
+
+        Instantiate(Booom, transform.position, Quaternion.identity);
 
         GameObject g = Instantiate(NeutrualWisp, transform.position, Quaternion.identity) as GameObject;
         g.transform.rotation.SetEulerAngles(-90,0,0);
