@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: test
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300001}
+  m_Snapshots:
+  - {fileID: 24500003}
+  m_StartSnapshot: {fileID: 24500003}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 1ae4bb827bae8e74aafea164779ce403
+    - eb32dc9d13164554e97edf3b671f8f9c
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500003}
+--- !u!243 &24300001
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 1ae4bb827bae8e74aafea164779ce403
+  m_Children:
+  - {fileID: 24326212}
+  m_Volume: 129f0cea601fcaf428056d29e5832b74
+  m_Pitch: fc97b2da90ca63946b935a721dc91541
+  m_Effects:
+  - {fileID: 24400002}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &24326212
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SFX
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: eb32dc9d13164554e97edf3b671f8f9c
+  m_Children: []
+  m_Volume: c060cc138f0331143bc0a02ae9001952
+  m_Pitch: a5257f5006b74654898dfdf43ae2a442
+  m_Effects:
+  - {fileID: 24450008}
+  - {fileID: 24486644}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400002
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 45183ed0c10baa142a10a8ca22b73d8a
+  m_EffectName: Attenuation
+  m_MixLevel: 97a621f0ada390a4bbd8f5bd2f1dc6cb
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &24450008
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 4d9d6dec25889eb448ea2610e95a3ed0
+  m_EffectName: Attenuation
+  m_MixLevel: 2e6365ac520ed8941931850f1a988efe
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &24486644
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: a21592f2394213943a5464014440d68a
+  m_EffectName: SFX Reverb
+  m_MixLevel: 39faf2bbb74c6d24a95fc40d69c18bfd
+  m_Parameters:
+  - m_ParameterName: Dry Level
+    m_GUID: 044b22ea7d41a2b49866a1a9a39afb2b
+  - m_ParameterName: Room
+    m_GUID: 0f9fdbf499874074397354c0bddd894a
+  - m_ParameterName: Room HF
+    m_GUID: 087e93bad7392b9459a4b3e19f785d26
+  - m_ParameterName: Decay Time
+    m_GUID: ec2b510be13984444ae23bf57cba7ab6
+  - m_ParameterName: Decay HF Ratio
+    m_GUID: e0dd40fe03510a24da44a5a0ecb8f977
+  - m_ParameterName: Reflections
+    m_GUID: 6b183abadfaa650438b1981d461522dd
+  - m_ParameterName: Reflect Delay
+    m_GUID: b4c05fdf6b824ff40a4bb27a19bdd8e1
+  - m_ParameterName: Reverb
+    m_GUID: da514d960cedfba4e91d798d07f229c2
+  - m_ParameterName: Reverb Delay
+    m_GUID: 53ebc85eee30d3b43ae666ff2e1e4c15
+  - m_ParameterName: Diffusion
+    m_GUID: d400f66c14806394c9513cdd7da4038d
+  - m_ParameterName: Density
+    m_GUID: 4532b9457234c184fbea789f828f28be
+  - m_ParameterName: HF Reference
+    m_GUID: 12b1422bd3a5322488cf7a0d35fb9916
+  - m_ParameterName: Room LF
+    m_GUID: b096617a76d461947ab0e32881a95d4d
+  - m_ParameterName: LF Reference
+    m_GUID: 916f573d373ddb8419da22ec5614e71d
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500003
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 84df0b0568cffc346980a738221fff94
+  m_FloatValues: {}
+  m_TransitionOverrides: {}

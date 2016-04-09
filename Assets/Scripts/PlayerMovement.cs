@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject Graphics;
     [SerializeField]
-    private AudioSource Eksplosion;
-    [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
@@ -31,6 +29,9 @@ public class PlayerMovement : MonoBehaviour {
     private bool grounded = false;
     [SerializeField]
     private int StartAmmo = 3;
+    [SerializeField]
+    public AudioClip[] AudioClips = new AudioClip[3];
+    [SerializeField]
     private List<GameObject> ammoShow = new List<GameObject>();
     private int ammo = 3;
     private Vector3 lastAim;
@@ -42,6 +43,8 @@ public class PlayerMovement : MonoBehaviour {
         gameObject.tag = "player" + ControllerID;
         UpdateAmmoCount();
         lastAim = new Vector3(1,0,0);
+        Wisp.RandomAudioClips = AudioClips;
+
     }
 	
 	void Update () {
@@ -54,11 +57,11 @@ public class PlayerMovement : MonoBehaviour {
             body.MovePosition(new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
 
         if (Input.GetAxisRaw("Horizontal" + ControllerID) > 0.3f) {
-            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         if (Input.GetAxisRaw("Horizontal" + ControllerID) < -0.3f)
         {
-            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 270, 0));
+            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
 
         bool InputX = false;
@@ -200,7 +203,7 @@ public class PlayerMovement : MonoBehaviour {
         //g.transform.LookAt(transform.position + transform.forward * 5);
         Wisp other = (Wisp)g.GetComponent(typeof(Wisp));
         other.setColor(ControllerID);
-        other.setNW(NeutrualWisp, Eksplosion);
+        other.setNW(NeutrualWisp);
         ammo--;
         UpdateAmmoCount();
     }
