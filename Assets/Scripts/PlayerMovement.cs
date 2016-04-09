@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject NeutrualWisp;
     [SerializeField]
+    private GameObject Souls;
+    [SerializeField]
+    private GameObject EmptyObject;
+    [SerializeField]
     private GameObject Aim;
     [SerializeField]
     private float ProjectileSpeed;
@@ -34,15 +38,13 @@ public class PlayerMovement : MonoBehaviour {
         ammo = StartAmmo;
         body = gameObject.GetComponent<Rigidbody>();
         gameObject.tag = "player" + ControllerID;
-        //UpdateAmmoCount();
+        UpdateAmmoCount();
         lastAim = new Vector3(1,0,0);
     }
 	
 	void Update () {
 
         grounded = isGrounded();
-
-        Debug.Log(Input.GetAxisRaw("Horizontal2"));
         
         if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.2f)
             body.MovePosition(new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
@@ -90,33 +92,31 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetAxisRaw("Hor" + ControllerID) != 0 && -Input.GetAxisRaw("Ver" + ControllerID) != 0)
             lastAim = new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized;
 
-        Aim.transform.LookAt(transform.position + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized);
-
-       // Debug.Log(Input.GetAxisRaw("Ver" + ControllerID));
-
     }
 
     void UpdateAmmoCount() {
 
-        Transform t = transform;
-        t.rotation.SetEulerAngles(0,0,0);
+        for (int i = 0; i < ammoShow.Count; i++)
+        {
+            Destroy(ammoShow[i]);
+        }
+
+        ammoShow.Clear();
 
         for (int i = ammoShow.Count; i < ammo; i++) {
-            GameObject g = new GameObject();
+            GameObject g = Instantiate(Souls, transform.position, Quaternion.identity) as GameObject;
             ammoShow.Add(g);
-
         }
-
-        for (int i = ammoShow.Count; i > ammo; i--) {
-            ammoShow.RemoveAt(ammoShow.Count - 1);
-        }
-
-        float angle = 360 / ammo;
 
         for (int i = 0; i < ammoShow.Count; i++) {
-            ammoShow[i].transform.position = transform.position + t.forward;
-            t.Rotate(angle, 0,0);
+
+            float angle = 360 / ammo;
+
+            ammoShow[i].transform.position = transform.position + EmptyObject.transform.forward + new Vector3(0,0,-5);
             ammoShow[i].transform.SetParent(transform);
+            EmptyObject.transform.Rotate(angle, 0,0);
+            RotateAround other = (RotateAround)ammoShow[i].GetComponent(typeof(RotateAround));
+            other.init(transform);
         }
 
     }
@@ -139,6 +139,8 @@ public class PlayerMovement : MonoBehaviour {
 
             Die();
 
+            UpdateAmmoCount();
+
         }
     }
 
@@ -149,6 +151,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             PickUp(collision.gameObject);
             body.velocity = Vector3.zero;
+            UpdateAmmoCount();
         }
     }
 
@@ -179,6 +182,7 @@ public class PlayerMovement : MonoBehaviour {
         other.setColor(ControllerID);
         other.setNW(NeutrualWisp);
         ammo--;
+        UpdateAmmoCount();
     }
 
     bool isGrounded() {

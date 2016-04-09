@@ -3,17 +3,16 @@ using System.Collections;
 
 public class RotateAround : MonoBehaviour {
 
-    Vector3 point;
+    Transform point;
 
     void Awake() {
-        point = new Vector3();
     }
 	
 	void Update () {
-        transform.RotateAround(point, Vector3.up, 20 * Time.deltaTime);
+        transform.RotateAround(point.position, Vector3.forward, 20 * Time.deltaTime);
     }
 
-    void init(Vector3 p) {
+    public void init(Transform p) {
         point = p;
     }
 }
