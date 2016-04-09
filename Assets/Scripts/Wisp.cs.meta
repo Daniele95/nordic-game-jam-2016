@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: cde3c04e9c2c78d4bb300f479ddca86b
-timeCreated: 1460159130
+timeCreated: 1460198166
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - NeutrualWisp: {fileID: 101330, guid: cd0a3a040e028ec4b86a930791f96291, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
