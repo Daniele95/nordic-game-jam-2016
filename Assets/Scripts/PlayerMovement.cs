@@ -43,8 +43,10 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
 
         grounded = isGrounded();
-        
-        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.2f)
+
+        RaycastHit asd;
+
+        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.2f && !Physics.SphereCast(transform.position, 0.2f, new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID), 0, 0).normalized, out asd, 0.2f))
             body.MovePosition(new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
 
         bool InputX = false;
