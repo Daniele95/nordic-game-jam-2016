@@ -7,13 +7,9 @@ public class Wisp : MonoBehaviour {
     private int color = 0;
     Material newMaterial;
 
-    void Start () {
+    void Awake () {
         MeshRenderer gameObjectRenderer = gameObject.GetComponent<MeshRenderer>();
 
-        newMaterial = new Material(Shader.Find(" Diffuse"));
-
-        newMaterial.color = Color.white;
-        gameObjectRenderer.material = newMaterial;
     }
 
 	void Update () {
@@ -21,28 +17,41 @@ public class Wisp : MonoBehaviour {
         if(color == 1)
         {
             gameObject.tag = "wisp1";
-            newMaterial.color = Color.red;
         }
         else if (color == 2)
         {
             gameObject.tag = "wisp2";
-            newMaterial.color = Color.blue;
         }
         else if (color == 3)
         {
             gameObject.tag = "wisp3";
-            newMaterial.color = Color.green;
         }
         else if (color == 4)
         {
             gameObject.tag = "wisp4";
-            newMaterial.color = Color.yellow;
         }
 
     }
 
     public void setColor(int c) {
         color = c;
+
+        if (color == 1)
+        {
+            gameObject.tag = "wisp1";
+        }
+        else if (color == 2)
+        {
+            gameObject.tag = "wisp2";
+        }
+        else if (color == 3)
+        {
+            gameObject.tag = "wisp3";
+        }
+        else if (color == 4)
+        {
+            gameObject.tag = "wisp4";
+        }
     }
 
     public void setNW(GameObject g)
@@ -50,8 +59,12 @@ public class Wisp : MonoBehaviour {
         NeutrualWisp = g;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
+
+        if (collision.gameObject.tag == "player" + color)
+            return;
+
         GameObject g = Instantiate(NeutrualWisp, transform.position, Quaternion.identity) as GameObject;
         g.transform.rotation.SetEulerAngles(-90,0,0);
         Destroy(gameObject);

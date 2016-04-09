@@ -190,23 +190,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 143474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47868f32dc535dd41bd90688c18005a6, type: 3}
+  m_Script: {fileID: 11500000, guid: f1c712d35320b97408df3f20b1605742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Aiming_Spot: {x: 0, y: 0}
   Light_Warning_Start: 1
-  Light_Death_Start: 3
-  Light_Death_Finish: 6
-  Light_Warning_Intensity: 3
-  Light_Death_Intensity: 6
+  Light_Death_Start: 2
+  Light_Death_Finish: 3
+  Light_Warning_Intensity: 1000
+  Light_Death_Intensity: 5000
   Light_Warning_Start_speed: 1
   Light_Death_Start_speed: 1
   Light_Death_Finish_speed: 1
-  Light_Radial_Speed: 4.940000057220459
+  Light_Radial_Speed: 1
   Light_ConeRadius: 1
   Light_Start_angle: 45
-  Cone_Light: {fileID: 199164}
-  Light_Angle_Adjust: {fileID: 144358}
+  Cone_Light: {fileID: 0}
+  Light_Angle_Adjust: {fileID: 0}
 --- !u!136 &13690618
 CapsuleCollider:
   m_ObjectHideFlags: 1

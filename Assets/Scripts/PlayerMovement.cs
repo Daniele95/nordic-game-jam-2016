@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject NeutrualWisp;
     [SerializeField]
-    private float ProjectileSpeed;
+    private GameObject Aim;
     [SerializeField]
-    private float speedVer;
+    private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
     [SerializeField]
@@ -25,41 +25,57 @@ public class PlayerMovement : MonoBehaviour {
     private bool grounded = false;
     [SerializeField]
     private int StartAmmo = 3;
+    private List<GameObject> ammoShow = new List<GameObject>();
     private int ammo = 3;
+    private Vector3 lastAim;
 
 
     void Start () {
+        ammo = StartAmmo;
         body = gameObject.GetComponent<Rigidbody>();
         gameObject.tag = "player" + ControllerID;
+        //UpdateAmmoCount();
+        lastAim = new Vector3(1,0,0);
     }
 	
 	void Update () {
 
         grounded = isGrounded();
 
-        body.MovePosition(new Vector3(Input.GetAxis("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
+        Debug.Log(Input.GetAxisRaw("Horizontal2"));
+        
+        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.2f)
+            body.MovePosition(new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
 
         bool InputX = false;
         bool InputE = false;
 
         if (ControllerID == 1) {
             InputX = Input.GetKeyDown(KeyCode.Joystick1Button0);
-            InputE = Input.GetKeyDown(KeyCode.Joystick1Button1);
+            InputE = Input.GetKeyDown(KeyCode.Joystick1Button5);
+            if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+                InputE = true;
         }
         if (ControllerID == 2)
         {
             InputX = Input.GetKeyDown(KeyCode.Joystick2Button0);
-            InputE = Input.GetKeyDown(KeyCode.Joystick1Button1);
+            InputE = Input.GetKeyDown(KeyCode.Joystick2Button5);
+            if (Input.GetKeyDown(KeyCode.Joystick2Button3))
+                InputE = true;
         }
         if (ControllerID == 3)
         {
             InputX = Input.GetKeyDown(KeyCode.Joystick3Button0);
-            InputE = Input.GetKeyDown(KeyCode.Joystick1Button1);
+            InputE = Input.GetKeyDown(KeyCode.Joystick3Button5);
+            if (Input.GetKeyDown(KeyCode.Joystick3Button3))
+                InputE = true;
         }
         if (ControllerID == 4)
         {
             InputX = Input.GetKeyDown(KeyCode.Joystick4Button0);
-            InputE = Input.GetKeyDown(KeyCode.Joystick1Button1);
+            InputE = Input.GetKeyDown(KeyCode.Joystick4Button5);
+            if (Input.GetKeyDown(KeyCode.Joystick4Button3))
+                InputE = true;
         }
 
         if ((Input.GetKeyDown(KeyCode.W) || InputX) && grounded) {
@@ -71,21 +87,73 @@ public class PlayerMovement : MonoBehaviour {
             Shoot();
         }
 
+        if (Input.GetAxisRaw("Hor" + ControllerID) != 0 && -Input.GetAxisRaw("Ver" + ControllerID) != 0)
+            lastAim = new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized;
+
+        Aim.transform.LookAt(transform.position + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized);
+
+       // Debug.Log(Input.GetAxisRaw("Ver" + ControllerID));
+
+    }
+
+    void UpdateAmmoCount() {
+
+        Transform t = transform;
+        t.rotation.SetEulerAngles(0,0,0);
+
+        for (int i = ammoShow.Count; i < ammo; i++) {
+            GameObject g = new GameObject();
+            ammoShow.Add(g);
+
+        }
+
+        for (int i = ammoShow.Count; i > ammo; i--) {
+            ammoShow.RemoveAt(ammoShow.Count - 1);
+        }
+
+        float angle = 360 / ammo;
+
+        for (int i = 0; i < ammoShow.Count; i++) {
+            ammoShow[i].transform.position = transform.position + t.forward;
+            t.Rotate(angle, 0,0);
+            ammoShow[i].transform.SetParent(transform);
+        }
+
+    }
+
+    void OnTriggerEnter(Collider collision)
+     {
+         if ((collision.gameObject.tag != "wisp" + ControllerID) && collision.gameObject.tag.Substring(0,4) == "wisp" && collision.gameObject.tag != "wisp0") {
+
+            if (collision.gameObject.tag == "wisp1")
+                PlayerStats.P1S++;
+
+            if (collision.gameObject.tag == "wisp2")
+                PlayerStats.P2S++;
+
+            if (collision.gameObject.tag == "wisp3")
+                PlayerStats.P3S++;
+
+            if (collision.gameObject.tag == "wisp4")
+                PlayerStats.P4S++;
+
+            Die();
+
+        }
     }
 
     void OnCollisionEnter(Collision collision)
-     {
-         if (collision.gameObject.tag != "wisp" + ControllerID && collision.gameObject.tag.Substring(0,4) == "wisp" && collision.gameObject.tag != "wisp0") {
-             Die();
-         }
-        else if (collision.gameObject.tag == "wisp0")
+    {
+
+       if (collision.gameObject.tag == "wisp0")
         {
             PickUp(collision.gameObject);
+            body.velocity = Vector3.zero;
         }
     }
 
     public void Die() {
-        transform.position = SpawnPoints[Random.Range(0,4)];
+        transform.position = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
         ammo = StartAmmo;
     }
 
@@ -98,9 +166,15 @@ public class PlayerMovement : MonoBehaviour {
         if (ammo <= 0)
             return;
 
-        GameObject g = Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z) + transform.forward * 1.1f, Quaternion.identity) as GameObject;
-        g.GetComponent<Rigidbody>().velocity = transform.forward * ProjectileSpeed;
-        g.transform.LookAt(transform.position + transform.forward * 5);
+        GameObject g = Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z) + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * .9f, Quaternion.identity) as GameObject;
+
+        if (Input.GetAxisRaw("Hor" + ControllerID) != 0 && -Input.GetAxisRaw("Ver" + ControllerID) != 0)
+            g.GetComponent<Rigidbody>().velocity = new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * ProjectileSpeed;
+        else {
+            g.GetComponent<Rigidbody>().velocity = lastAim * ProjectileSpeed;
+        }
+
+        //g.transform.LookAt(transform.position + transform.forward * 5);
         Wisp other = (Wisp)g.GetComponent(typeof(Wisp));
         other.setColor(ControllerID);
         other.setNW(NeutrualWisp);
