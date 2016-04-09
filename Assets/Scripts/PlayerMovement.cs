@@ -5,11 +5,14 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
 
+    [SerializeField, Range(1,4)]
     public int ControllerID = 1;
     [SerializeField]
     private Vector3[] SpawnPoints = new Vector3[4];
     [SerializeField]
     private GameObject Projectile;
+    [SerializeField]
+    private GameObject NeutrualWisp;
     [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
@@ -20,10 +23,14 @@ public class PlayerMovement : MonoBehaviour {
     private float JumpForce;
     private Rigidbody body;
     private bool grounded = false;
+    [SerializeField]
+    private int StartAmmo = 3;
+    private int ammo = 3;
 
 
     void Start () {
         body = gameObject.GetComponent<Rigidbody>();
+        gameObject.tag = "player" + ControllerID;
     }
 	
 	void Update () {
@@ -67,20 +74,37 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "wisp") {
-            Die();
+     {
+         if (collision.gameObject.tag != "wisp" + ControllerID && collision.gameObject.tag.Substring(0,4) == "wisp" && collision.gameObject.tag != "wisp0") {
+             Die();
+         }
+        else if (collision.gameObject.tag == "wisp0")
+        {
+            PickUp(collision.gameObject);
         }
     }
 
-    void Die() {
+    public void Die() {
         transform.position = SpawnPoints[Random.Range(0,4)];
+        ammo = StartAmmo;
+    }
+
+    public void PickUp(GameObject g) {
+        Destroy(g);
+        ammo++;
     }
 
     void Shoot() {
+        if (ammo <= 0)
+            return;
+
         GameObject g = Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z) + transform.forward * 1.1f, Quaternion.identity) as GameObject;
         g.GetComponent<Rigidbody>().velocity = transform.forward * ProjectileSpeed;
         g.transform.LookAt(transform.position + transform.forward * 5);
+        Wisp other = (Wisp)g.GetComponent(typeof(Wisp));
+        other.setColor(ControllerID);
+        other.setNW(NeutrualWisp);
+        ammo--;
     }
 
     bool isGrounded() {

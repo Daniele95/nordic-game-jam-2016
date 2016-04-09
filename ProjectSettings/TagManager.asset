@@ -4,7 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - wisp
+  - wisp1
+  - wisp2
+  - wisp3
+  - wisp4
+  - player1
+  - player2
+  - player3
+  - player4
+  - wisp0
   layers:
   - Default
   - TransparentFX
