@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject EmptyObject;
     [SerializeField]
+    private GameObject Graphics;
+    [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
@@ -27,6 +29,9 @@ public class PlayerMovement : MonoBehaviour {
     private bool grounded = false;
     [SerializeField]
     private int StartAmmo = 3;
+    [SerializeField]
+    public AudioClip[] AudioClips = new AudioClip[3];
+    [SerializeField]
     private List<GameObject> ammoShow = new List<GameObject>();
     private int ammo = 3;
     private Vector3 lastAim;
@@ -38,6 +43,8 @@ public class PlayerMovement : MonoBehaviour {
         gameObject.tag = "player" + ControllerID;
         UpdateAmmoCount();
         lastAim = new Vector3(1,0,0);
+        Wisp.RandomAudioClips = AudioClips;
+
     }
 	
 	void Update () {
@@ -46,8 +53,16 @@ public class PlayerMovement : MonoBehaviour {
 
         RaycastHit asd;
 
-        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.2f && !Physics.SphereCast(transform.position, 0.2f, new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID), 0, 0).normalized, out asd, 0.2f))
+        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.3f && !Physics.SphereCast(transform.position, 0.2f, new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID), 0, 0).normalized, out asd, 0.2f))
             body.MovePosition(new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
+
+        if (Input.GetAxisRaw("Horizontal" + ControllerID) > 0.3f) {
+            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+        if (Input.GetAxisRaw("Horizontal" + ControllerID) < -0.3f)
+        {
+            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        }
 
         bool InputX = false;
         bool InputE = false;

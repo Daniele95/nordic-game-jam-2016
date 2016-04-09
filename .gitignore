@@ -28,3 +28,168 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Detonator Explosion Framework.meta
+Assets/Detonator Explosion Framework/Detonator-Documentation.pdf
+Assets/Detonator Explosion Framework/Detonator-Documentation.pdf.meta
+Assets/Detonator Explosion Framework/Prefab Examples.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Base.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Base.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Chunks.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Chunks.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Crazysparks.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Crazysparks.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Heatwave(Pro).prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Heatwave(Pro).prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Ignitor.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Ignitor.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Insanity.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Insanity.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-MultiExample.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-MultiExample.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-MushroomCloud.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-MushroomCloud.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Simple.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Simple.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Sounds.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Sounds.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Spray.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Spray.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Tiny.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Tiny.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Upwards.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Upwards.prefab.meta
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Wide.prefab
+Assets/Detonator Explosion Framework/Prefab Examples/Detonator-Wide.prefab.meta
+Assets/Detonator Explosion Framework/Resources.meta
+Assets/Detonator Explosion Framework/Resources/Detonator.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Fireball.psd
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Fireball.psd.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Glow.psd
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Glow.psd.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/GlowDot.psd
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/GlowDot.psd.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/HeatDistort.shader
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/HeatDistort.shader.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Heatwave.psd
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Heatwave.psd.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Shockwave.psd
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Shockwave.psd.meta
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Smoke.psd
+Assets/Detonator Explosion Framework/Resources/Detonator/Textures/Smoke.psd.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Burninating.prefab
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Burninating.prefab.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Chunk.prefab
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Chunk.prefab.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/DetonatorSprayHelper.cs
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/DetonatorSprayHelper.cs.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/ExplosionArms.prefab
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/ExplosionArms.prefab.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/FireballA.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/FireballA.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/FireballB.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/FireballB.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/FireballC.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/FireballC.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/Glow.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/Glow.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/ShockWave.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/ShockWave.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeANew.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeANew.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeBNew.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeBNew.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeMIx 1.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeMIx 1.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeMIx.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/SmokeMIx.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/Sparks.mat
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/Materials/Sparks.mat.meta
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/SmokeTrail.prefab
+Assets/Detonator Explosion Framework/Sample Supporting Emitters/SmokeTrail.prefab.meta
+Assets/Detonator Explosion Framework/Sounds.meta
+Assets/Detonator Explosion Framework/Sounds/FarExplosionA.ogg
+Assets/Detonator Explosion Framework/Sounds/FarExplosionA.ogg.meta
+Assets/Detonator Explosion Framework/Sounds/FarExplosionB.ogg
+Assets/Detonator Explosion Framework/Sounds/FarExplosionB.ogg.meta
+Assets/Detonator Explosion Framework/Sounds/NearExplosionA.ogg
+Assets/Detonator Explosion Framework/Sounds/NearExplosionA.ogg.meta
+Assets/Detonator Explosion Framework/Sounds/NearExplosionB.ogg
+Assets/Detonator Explosion Framework/Sounds/NearExplosionB.ogg.meta
+Assets/Detonator Explosion Framework/System.meta
+Assets/Detonator Explosion Framework/System/Detonator.cs
+Assets/Detonator Explosion Framework/System/Detonator.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorBurstEmitter.cs
+Assets/Detonator Explosion Framework/System/DetonatorBurstEmitter.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorCloudRing.cs
+Assets/Detonator Explosion Framework/System/DetonatorCloudRing.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorComponent.cs
+Assets/Detonator Explosion Framework/System/DetonatorComponent.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorFireball.cs
+Assets/Detonator Explosion Framework/System/DetonatorFireball.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorForce.cs
+Assets/Detonator Explosion Framework/System/DetonatorForce.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorGlow.cs
+Assets/Detonator Explosion Framework/System/DetonatorGlow.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorHeatwave.cs
+Assets/Detonator Explosion Framework/System/DetonatorHeatwave.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorLight.cs
+Assets/Detonator Explosion Framework/System/DetonatorLight.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorShockwave.cs
+Assets/Detonator Explosion Framework/System/DetonatorShockwave.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorSmoke.cs
+Assets/Detonator Explosion Framework/System/DetonatorSmoke.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorSound.cs
+Assets/Detonator Explosion Framework/System/DetonatorSound.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorSparks.cs
+Assets/Detonator Explosion Framework/System/DetonatorSparks.cs.meta
+Assets/Detonator Explosion Framework/System/DetonatorSpray.cs
+Assets/Detonator Explosion Framework/System/DetonatorSpray.cs.meta
+Assets/Detonator Explosion Framework/System/Prefabs.meta
+Assets/Detonator Explosion Framework/System/Prefabs/Blue Explosion.prefab
+Assets/Detonator Explosion Framework/System/Prefabs/Blue Explosion.prefab.meta
+Assets/Detonator Explosion Framework/TestScene.meta
+Assets/Detonator Explosion Framework/TestScene/Cube.mat
+Assets/Detonator Explosion Framework/TestScene/Cube.mat.meta
+Assets/Detonator Explosion Framework/TestScene/Cubewall10m.prefab
+Assets/Detonator Explosion Framework/TestScene/Cubewall10m.prefab.meta
+Assets/Detonator Explosion Framework/TestScene/Detonator-TestWall.unity
+Assets/Detonator Explosion Framework/TestScene/Detonator-TestWall.unity.meta
+Assets/Detonator Explosion Framework/TestScene/DetonatorTest.cs
+Assets/Detonator Explosion Framework/TestScene/DetonatorTest.cs.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie Skybox.mat
+Assets/Detonator Explosion Framework/TestScene/Eerie Skybox.mat.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_back.tif
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_back.tif.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_down.tif
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_down.tif.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_front.tif
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_front.tif.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_left.tif
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_left.tif.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_right.tif
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_right.tif.meta
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_up.tif
+Assets/Detonator Explosion Framework/TestScene/Eerie/Eerie_up.tif.meta
+Assets/Detonator Explosion Framework/TestScene/Grid.psd
+Assets/Detonator Explosion Framework/TestScene/Grid.psd.meta
+Assets/Detonator Explosion Framework/TestScene/Logo.mat
+Assets/Detonator Explosion Framework/TestScene/Logo.mat.meta
+Assets/Detonator Explosion Framework/TestScene/Logo.psd
+Assets/Detonator Explosion Framework/TestScene/Logo.psd.meta
+Assets/Detonator Explosion Framework/TestScene/Materials.meta
+Assets/Detonator Explosion Framework/TestScene/Materials/Ruler.mat
+Assets/Detonator Explosion Framework/TestScene/Materials/Ruler.mat.meta
+Assets/Detonator Explosion Framework/TestScene/Materials/newruler.mat
+Assets/Detonator Explosion Framework/TestScene/Materials/newruler.mat.meta
+Assets/Detonator Explosion Framework/TestScene/NewGrid.mat
+Assets/Detonator Explosion Framework/TestScene/NewGrid.mat.meta
+Assets/Detonator Explosion Framework/TestScene/Ruler.fbx
+Assets/Detonator Explosion Framework/TestScene/Ruler.fbx.meta
+Assets/Detonator Explosion Framework/TestScene/Ruler.psd
+Assets/Detonator Explosion Framework/TestScene/Ruler.psd.meta
+Assets/Detonator Explosion Framework/TestScene/TouchToMouse.cs
+Assets/Detonator Explosion Framework/TestScene/TouchToMouse.cs.meta

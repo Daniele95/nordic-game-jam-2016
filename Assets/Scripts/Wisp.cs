@@ -6,6 +6,9 @@ public class Wisp : MonoBehaviour {
     private GameObject NeutrualWisp;
     private int color = 0;
     Material newMaterial;
+    AudioSource audio;
+
+    public static AudioClip[] RandomAudioClips = new AudioClip[3];
 
     void Awake () {
         MeshRenderer gameObjectRenderer = gameObject.GetComponent<MeshRenderer>();
@@ -57,6 +60,7 @@ public class Wisp : MonoBehaviour {
     public void setNW(GameObject g)
     {
         NeutrualWisp = g;
+
     }
 
     void OnTriggerEnter(Collider collision)
@@ -64,6 +68,12 @@ public class Wisp : MonoBehaviour {
 
         if (collision.gameObject.tag == "player" + color)
             return;
+
+        AudioClip[] sounds = new AudioClip[3];
+        RandomAudioClips.CopyTo(sounds, 0);
+
+        SoundManager_01 asd = new SoundManager_01();
+        //asd.PlayRandomSound(0.85f, 1.15f, 0.7f, 1.3f, RandomAudioClips);
 
         GameObject g = Instantiate(NeutrualWisp, transform.position, Quaternion.identity) as GameObject;
         g.transform.rotation.SetEulerAngles(-90,0,0);
