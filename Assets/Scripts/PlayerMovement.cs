@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject EmptyObject;
     [SerializeField]
+    private GameObject Graphics;
+    [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
@@ -46,8 +48,16 @@ public class PlayerMovement : MonoBehaviour {
 
         RaycastHit asd;
 
-        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.2f && !Physics.SphereCast(transform.position, 0.2f, new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID), 0, 0).normalized, out asd, 0.2f))
+        if(Mathf.Abs(Input.GetAxisRaw("Horizontal" + ControllerID)) > 0.3f && !Physics.SphereCast(transform.position, 0.2f, new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID), 0, 0).normalized, out asd, 0.2f))
             body.MovePosition(new Vector3(Input.GetAxisRaw("Horizontal" + ControllerID) * speedHor * Time.deltaTime, 0) + transform.position);
+
+        if (Input.GetAxisRaw("Horizontal" + ControllerID) > 0.3f) {
+            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        }
+        if (Input.GetAxisRaw("Horizontal" + ControllerID) < -0.3f)
+        {
+            Graphics.transform.rotation = Quaternion.Euler(new Vector3(0, 270, 0));
+        }
 
         bool InputX = false;
         bool InputE = false;
