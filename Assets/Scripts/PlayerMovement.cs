@@ -18,8 +18,6 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject EmptyObject;
     [SerializeField]
-    private GameObject Aim;
-    [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
@@ -96,6 +94,8 @@ public class PlayerMovement : MonoBehaviour {
 
     void UpdateAmmoCount() {
 
+        EmptyObject.transform.rotation = Quaternion.identity;
+
         for (int i = 0; i < ammoShow.Count; i++)
         {
             Destroy(ammoShow[i]);
@@ -112,9 +112,9 @@ public class PlayerMovement : MonoBehaviour {
 
             float angle = 360 / ammo;
 
-            ammoShow[i].transform.position = transform.position + EmptyObject.transform.forward + new Vector3(0,0,-5);
+            ammoShow[i].transform.position = transform.position + EmptyObject.transform.up + new Vector3(0,0,-5);
             ammoShow[i].transform.SetParent(transform);
-            EmptyObject.transform.Rotate(angle, 0,0);
+            EmptyObject.transform.Rotate(0,0, angle);
             RotateAround other = (RotateAround)ammoShow[i].GetComponent(typeof(RotateAround));
             other.init(transform);
         }
@@ -158,11 +158,13 @@ public class PlayerMovement : MonoBehaviour {
     public void Die() {
         transform.position = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
         ammo = StartAmmo;
+        UpdateAmmoCount();
     }
 
     public void PickUp(GameObject g) {
         Destroy(g);
         ammo++;
+        UpdateAmmoCount();
     }
 
     void Shoot() {
@@ -176,6 +178,10 @@ public class PlayerMovement : MonoBehaviour {
         else {
             g.GetComponent<Rigidbody>().velocity = lastAim * ProjectileSpeed;
         }
+
+        EmptyObject.transform.LookAt( new Vector3(transform.position.x, transform.position.y, transform.position.z) + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * 2f);
+
+        g.transform.rotation.Set(EmptyObject.transform.rotation.x, EmptyObject.transform.rotation.y, EmptyObject.transform.rotation.z, EmptyObject.transform.rotation.w);
 
         //g.transform.LookAt(transform.position + transform.forward * 5);
         Wisp other = (Wisp)g.GetComponent(typeof(Wisp));
