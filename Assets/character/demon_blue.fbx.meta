@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 22d41a717cb4b44229c6ec9f46cca3f7
-timeCreated: 1460232718
+guid: 9ca99b0db99adcd47b3e0b0741690474
+timeCreated: 1460237290
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: body
-    100002: demon-mesh.001
+    100002: demon-mesh
     100004: demon-rig
     100006: //RootNode
     100008: head
@@ -20,9 +20,8 @@ ModelImporter:
     100024: RightArm2
     100026: RightHand
     100028: RightHand_end
-    100030: demon-mesh
     400000: body
-    400002: demon-mesh.001
+    400002: demon-mesh
     400004: demon-rig
     400006: //RootNode
     400008: head
@@ -36,18 +35,13 @@ ModelImporter:
     400024: RightArm2
     400026: RightHand
     400028: RightHand_end
-    400030: demon-mesh
-    4300000: demon-mesh.001
-    4300002: demon-mesh
+    4300000: demon-mesh
     7400000: demon-rig|attack
-    7400002: demon-rig|attack.001
-    7400004: demon-rig|idle
-    7400006: demon-rig|walk-jump
-    7400008: demon-mesh.001|attack.001
-    7400010: demon-mesh|attack
+    7400002: demon-rig|idle
+    7400004: demon-rig|walk-jump
+    7400006: demon-mesh|attack
     9500000: //RootNode
-    13700000: demon-mesh.001
-    13700002: demon-mesh
+    13700000: demon-mesh
   materials:
     importMaterials: 1
     materialName: 0
