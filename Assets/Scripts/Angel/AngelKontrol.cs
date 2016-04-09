@@ -26,6 +26,13 @@ public class AngelKontrol : MonoBehaviour {
 	}
 
 	void Start (){
+
+		One_Behav = (AngelBehavior)Angel_One.transform.gameObject.GetComponent (typeof(AngelBehavior));
+		Two_Behav = (AngelBehavior)Angel_One.transform.gameObject.GetComponent (typeof(AngelBehavior));
+
+		Angel_One_Respawn ();
+		Angel_Two_Respawn ();
+/*
 		pos_1 = Random.Range (0, ( Spawns.Length - 1) );
 		pos_2 = Random.Range (0, ( Spawns.Length - 1) );
 		while (pos_2 == pos_1) {
@@ -37,13 +44,7 @@ public class AngelKontrol : MonoBehaviour {
 
 		Angel_Two.transform.rotation = Spawns [pos_2].transform.rotation;
 		Angel_Two.transform.position = Spawns [pos_2].transform.position;
-
-		One_Behav = (AngelBehavior)Angel_One.transform.gameObject.GetComponent (typeof(AngelBehavior));
-		Two_Behav = (AngelBehavior)Angel_One.transform.gameObject.GetComponent (typeof(AngelBehavior));
-
-		for( int i = 0; i < Spawns.Length; ++i) {
-			//Instantiate (Angel_Prefabs_ITSAPREFAB);
-		}
+*/
 	}
 	
 	// Update is called once per frame
@@ -54,8 +55,9 @@ public class AngelKontrol : MonoBehaviour {
 			Angel_One_Respawn ();
 		}
 
+		Debug.Log (Two_Behav.Get_Ray_Shooted( ));
 		if ( ( Two_Behav.Get_Ray_Shooted() == Number_Of_Rays_Before_Respawn) ||
-			( Two_Behav.Get_Ray_Shooted() == Number_Of_Rays_Before_Respawn)     )
+			 ( Two_Behav.Get_Ray_Shooted() > Number_Of_Rays_Before_Respawn)     )
 		{
 			Angel_Two_Respawn ();
 		}
