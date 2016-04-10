@@ -1036,7 +1036,7 @@ Prefab:
       objectReference: {fileID: 110804, guid: 3dbd58f3bad5d2d42b3d75e88c98d94f, type: 2}
     - target: {fileID: 5471062, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
       propertyPath: m_AngularDrag
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5471062, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
       propertyPath: m_IsKinematic
@@ -1048,7 +1048,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11494182, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
       propertyPath: JumpForce
-      value: 12
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494182, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
+      propertyPath: StartAmmo
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
@@ -1513,7 +1517,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11492016, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: JumpForce
-      value: 12
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492016, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
+      propertyPath: StartAmmo
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
@@ -1734,7 +1742,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493504, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
       propertyPath: JumpForce
-      value: 12
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493504, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
+      propertyPath: StartAmmo
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
@@ -1852,7 +1864,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415504, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
       propertyPath: JumpForce
-      value: 12
+      value: 14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415504, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
+      propertyPath: StartAmmo
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
