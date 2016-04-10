@@ -75,7 +75,7 @@ public class Wisp : MonoBehaviour {
         if(a.clip.isReadyToPlay)
             a.Play();
 
-        CameraShaker.Instance.ShakeOnce(0.8f, 1.4f, 0.2f, 0.4f);
+        CameraShaker.Instance.ShakeOnce(1.2f, 1.5f, 0.2f, 0.4f);
 
         Instantiate(Booom, transform.position, Quaternion.identity);
 

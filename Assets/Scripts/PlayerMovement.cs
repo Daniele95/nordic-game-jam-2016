@@ -189,7 +189,7 @@ public class PlayerMovement : MonoBehaviour {
     public void Die() {
         transform.position = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
         ammo = StartAmmo;
-        CameraShaker.Instance.ShakeOnce(1.8f, 1.4f, 0.2f, 0.4f);
+        CameraShaker.Instance.ShakeOnce(2f, 1.8f, 0.2f, 0.4f);
         UpdateAmmoCount();
     }
 
@@ -206,12 +206,21 @@ public class PlayerMovement : MonoBehaviour {
         Anim.SetBool("Attack", true);
 
         GameObject g = Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z) + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * .9f, Quaternion.identity) as GameObject;
+        float y = -Input.GetAxisRaw("Ver" + ControllerID);
+        float x = Input.GetAxisRaw("Hor" + ControllerID);
 
         if (Input.GetAxisRaw("Hor" + ControllerID) != 0 && -Input.GetAxisRaw("Ver" + ControllerID) != 0)
             g.GetComponent<Rigidbody>().velocity = new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * ProjectileSpeed;
         else {
             g.GetComponent<Rigidbody>().velocity = lastAim * ProjectileSpeed;
         }
+
+        float theta = Mathf.Atan(y/x);
+        
+        if(x >= 0)
+            g.transform.Rotate(0,0,-90 + theta*90);
+        else
+            g.transform.Rotate(0, 0, 90 + theta * 90);
 
         EmptyObject.transform.LookAt( new Vector3(transform.position.x, transform.position.y, transform.position.z) + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * 2f);
 
