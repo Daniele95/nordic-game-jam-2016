@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AngelKontrol2 : MonoBehaviour {
 
@@ -31,7 +32,7 @@ public class AngelKontrol2 : MonoBehaviour {
 	public float Light_ConeRadius = 1.0f;
 	public float Light_Start_angle = 45.0f;
 
-
+	private List<AngelBehavior> Script_List = new List<AngelBehavior>();
 
 	private int Active_1 = 0;
 	private int Active_2 = 0;
@@ -41,9 +42,9 @@ public class AngelKontrol2 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		//for (int i = 0; i < Scripts.Length; ++i) {
-		//	Scripts[i] = (AngelBehavior)Angels[i].transform.gameObject.GetComponent (typeof(AngelBehavior));
-		//}
+		for (int i = 0; i < Angels.Length; ++i) {
+			Script_List.Add( (AngelBehavior)Angels[i].transform.gameObject.GetComponent (typeof(AngelBehavior)));
+		}
 
 		Sel_Active_1 ();
 		Sel_Active_2 ();
@@ -58,39 +59,42 @@ public class AngelKontrol2 : MonoBehaviour {
 		if ((delta_time_1 > 0.0) &&
 		   (delta_time_1 < Light_Warning_Start)) {
 //			Scripts [Active_1].phase = 0;
-			AngelBehavior Comodo = (AngelBehavior)Angels[Active_1].transform.gameObject.GetComponent (typeof(AngelBehavior));
-			Comodo.phase = 0;
+			Script_List [Active_1].phase = 0;
 		}
 
 		if ((delta_time_2 > 0.0) &&
 			(delta_time_2 < Light_Warning_Start)) {
-//			Scripts [Active_2].phase = 0;
-			AngelBehavior Comodo = (AngelBehavior)Angels[Active_2].transform.gameObject.GetComponent (typeof(AngelBehavior));
-			Comodo.phase = 0;
+			Script_List [Active_2].phase = 0;
+//			AngelBehavior Comodo = (AngelBehavior)Angels[Active_2].transform.gameObject.GetComponent (typeof(AngelBehavior));
+//			Comodo.phase = 0;
 		}
 
 		if ((delta_time_1 <= Light_Death_Start) &&
 			(delta_time_1 > Light_Warning_Start)) {
-			AngelBehavior Comodo = (AngelBehavior)Angels[Active_1].transform.gameObject.GetComponent (typeof(AngelBehavior));
-			Comodo.phase = 1;
+			Script_List [Active_1].phase = 1;
+//			AngelBehavior Comodo = (AngelBehavior)Angels[Active_1].transform.gameObject.GetComponent (typeof(AngelBehavior));
+//			Comodo.phase = 1;
 		}
 
 		if ((delta_time_2 <= Light_Death_Start) &&
 			(delta_time_2 > Light_Warning_Start)) {
-			AngelBehavior Comodo = (AngelBehavior)Angels[Active_2].transform.gameObject.GetComponent (typeof(AngelBehavior));
-			Comodo.phase = 1;
+			Script_List [Active_2].phase = 1;
+//			AngelBehavior Comodo = (AngelBehavior)Angels[Active_2].transform.gameObject.GetComponent (typeof(AngelBehavior));
+//			Comodo.phase = 1;
 		}
 			
 		if ((delta_time_1 <= Light_Death_Finish) &&
 			(delta_time_1 > Light_Death_Start)) {
-			AngelBehavior Comodo = (AngelBehavior)Angels[Active_1].transform.gameObject.GetComponent (typeof(AngelBehavior));
-			Comodo.phase = 2;
+			Script_List [Active_1].phase = 2;
+//			AngelBehavior Comodo = (AngelBehavior)Angels[Active_1].transform.gameObject.GetComponent (typeof(AngelBehavior));
+//			Comodo.phase = 2;
 		}
 
 		if ((delta_time_2 <= Light_Death_Finish) &&
 			(delta_time_2 > Light_Death_Start)) {
-			AngelBehavior Comodo = (AngelBehavior)Angels[Active_2].transform.gameObject.GetComponent (typeof(AngelBehavior));
-			Comodo.phase = 2;
+			Script_List [Active_2].phase = 2;
+//			AngelBehavior Comodo = (AngelBehavior)Angels[Active_2].transform.gameObject.GetComponent (typeof(AngelBehavior));
+//			Comodo.phase = 2;
 		}
 
 		if (delta_time_1 > Light_Death_Finish) {
