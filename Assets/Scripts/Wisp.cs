@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using EZCameraShake;
 
 public class Wisp : MonoBehaviour {
 
@@ -72,6 +73,8 @@ public class Wisp : MonoBehaviour {
 
         AudioClip[] sounds = new AudioClip[3];
         RandomAudioClips.CopyTo(sounds, 0);
+
+        CameraShaker.Instance.ShakeOnce(0.8f, 1.4f, 0.2f, 0.4f);
 
         SoundManager_01 asd = new SoundManager_01();
         //asd.PlayRandomSound(0.85f, 1.15f, 0.7f, 1.3f, RandomAudioClips);
