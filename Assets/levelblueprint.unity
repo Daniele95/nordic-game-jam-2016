@@ -387,12 +387,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 43
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1018,12 +1018,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 43
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1190,7 +1190,7 @@ Transform:
   m_LocalScale: {x: 7.619133, y: 2.3037946, z: 1.310761}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1001 &433995718
 Prefab:
   m_ObjectHideFlags: 0
@@ -1310,19 +1310,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 985213353}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.91000175
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -11.78
+      value: -4.99
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.419999
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1330,7 +1330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1338,11 +1338,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 446496, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 169296, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
       propertyPath: m_IsActive
@@ -1973,7 +1973,7 @@ RectTransform:
   - {fileID: 936277825}
   - {fileID: 149241046}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 17
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2646,12 +2646,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 43
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2733,10 +2733,6 @@ Prefab:
 --- !u!1 &985213349 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 141182, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
-  m_PrefabInternal: {fileID: 561760217}
---- !u!4 &985213353 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 439866, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
   m_PrefabInternal: {fileID: 561760217}
 --- !u!82 &985213354
 AudioSource:
@@ -3760,7 +3756,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 18
 --- !u!1001 &1451512486
 Prefab:
   m_ObjectHideFlags: 0
@@ -4019,12 +4015,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 43
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
