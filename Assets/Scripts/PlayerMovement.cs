@@ -147,16 +147,16 @@ public class PlayerMovement : MonoBehaviour {
          if ((collision.gameObject.tag != "wisp" + ControllerID) && collision.gameObject.tag.Substring(0,4) == "wisp" && collision.gameObject.tag != "wisp0") {
 
             if (collision.gameObject.tag == "wisp1")
-                PlayerStats.P1S++;
+               PlayerStats.Statistics.P1S++;
 
             if (collision.gameObject.tag == "wisp2")
-                PlayerStats.P2S++;
+				PlayerStats.Statistics.P2S++;
 
             if (collision.gameObject.tag == "wisp3")
-                PlayerStats.P3S++;
+				PlayerStats.Statistics.P3S++;
 
             if (collision.gameObject.tag == "wisp4")
-                PlayerStats.P4S++;
+				PlayerStats.Statistics.P4S++;
 
             Die();
 

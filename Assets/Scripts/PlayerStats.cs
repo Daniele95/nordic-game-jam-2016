@@ -2,11 +2,21 @@
 using System.Collections;
 
 public class PlayerStats {
+	public static PlayerStats Statistics;
 
-    public static float RemaningTime;
-    public static int P1S;
-    public static int P2S;
-    public static int P3S;
-    public static int P4S;
+    public float RemaningTime;
+	public Canvas UsedCanv;
+
+    public int P1S;
+    public int P2S;
+    public int P3S;
+    public int P4S;
+
+	void Update()
+	{
+		RemaningTime -= Time.deltaTime;
+		if (RemaningTime <= 0.0f) {
+		}
+	}
 
 }
