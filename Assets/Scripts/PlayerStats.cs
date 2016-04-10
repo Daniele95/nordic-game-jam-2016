@@ -2,15 +2,16 @@
 using System.Collections;
 
 public class PlayerStats {
-	public static PlayerStats Statistics;
+	public static PlayerStats Statistics = new PlayerStats();
 
     public float RemaningTime;
 	public Canvas UsedCanv;
 
-    public int P1S;
-    public int P2S;
-    public int P3S;
-    public int P4S;
+    public int P1S = 0;
+    public int P2S = 0;
+    public int P3S = 0;
+    public int P4S = 0;
+
 
 	void Update()
 	{
