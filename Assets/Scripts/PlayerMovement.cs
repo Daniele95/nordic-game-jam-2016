@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using EZCameraShake;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour {
@@ -40,7 +41,6 @@ public class PlayerMovement : MonoBehaviour {
     private int ammo = 3;
     private Vector3 lastAim;
 
-
     void Start () {
         ammo = StartAmmo;
         body = gameObject.GetComponent<Rigidbody>();
@@ -48,7 +48,6 @@ public class PlayerMovement : MonoBehaviour {
         UpdateAmmoCount();
         lastAim = new Vector3(1,0,0);
         Wisp.RandomAudioClips = AudioClips;
-
     }
 	
 	void Update () {
@@ -181,6 +180,7 @@ public class PlayerMovement : MonoBehaviour {
     public void Die() {
         transform.position = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
         ammo = StartAmmo;
+        CameraShaker.Instance.ShakeOnce(1.5f, 1.2f, 0.2f, 0.4f);
         UpdateAmmoCount();
     }
 
