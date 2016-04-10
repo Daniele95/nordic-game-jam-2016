@@ -49,7 +49,7 @@ public class AngelKontrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ( ( One_Behav.Get_Ray_Shooted() == Number_Of_Rays_Before_Respawn) ||
+/*		if ( ( One_Behav.Get_Ray_Shooted() == Number_Of_Rays_Before_Respawn) ||
 			 ( One_Behav.Get_Ray_Shooted() > Number_Of_Rays_Before_Respawn )    )
 		{
 			Angel_One_Respawn ();
@@ -61,6 +61,7 @@ public class AngelKontrol : MonoBehaviour {
 		{
 			Angel_Two_Respawn ();
 		}
+		*/
 	}
 
 	public void Angel_One_Respawn()
@@ -85,5 +86,16 @@ public class AngelKontrol : MonoBehaviour {
 		Angel_Two.transform.position = Spawns [pos_2].transform.position;
 
 		Two_Behav.Reset_Rays ();
+	}
+
+	public void Angel_Respawn( GameObject Angel )
+	{
+		if (Angel == Angel_One) { 
+			Angel_One_Respawn ();
+		} else
+		{ 
+			Angel_One_Respawn ();
+		}
+
 	}
 }
