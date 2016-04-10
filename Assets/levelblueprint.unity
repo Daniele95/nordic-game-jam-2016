@@ -963,6 +963,10 @@ Prefab:
       propertyPath: Blood
       value: 
       objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
+    - target: {fileID: 11494182, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
+      propertyPath: SpawnPAr
+      value: 
+      objectReference: {fileID: 110804, guid: 3dbd58f3bad5d2d42b3d75e88c98d94f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
   m_IsPrefabParent: 0
@@ -1194,7 +1198,7 @@ Transform:
   m_LocalScale: {x: 7.619133, y: 2.3037946, z: 1.310761}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1001 &433995718
 Prefab:
   m_ObjectHideFlags: 0
@@ -1416,6 +1420,10 @@ Prefab:
       propertyPath: Blood
       value: 
       objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
+    - target: {fileID: 11492016, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
+      propertyPath: SpawnPAr
+      value: 
+      objectReference: {fileID: 177174, guid: bb149f62a01d64b41b1080703f21192d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
   m_IsPrefabParent: 0
@@ -1625,6 +1633,10 @@ Prefab:
       propertyPath: Blood
       value: 
       objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
+    - target: {fileID: 11493504, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
+      propertyPath: SpawnPAr
+      value: 
+      objectReference: {fileID: 137904, guid: b40c3a10f8ee4624da2e29e9d9406b7b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
   m_IsPrefabParent: 0
@@ -1731,6 +1743,10 @@ Prefab:
       propertyPath: Blood
       value: 
       objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
+    - target: {fileID: 11415504, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
+      propertyPath: SpawnPAr
+      value: 
+      objectReference: {fileID: 125028, guid: 847fee83decd8ea40886aaee85c9fcba, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
   m_IsPrefabParent: 0
@@ -1989,7 +2005,7 @@ RectTransform:
   - {fileID: 936277825}
   - {fileID: 149241046}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3772,7 +3788,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 21
 --- !u!1001 &1451512486
 Prefab:
   m_ObjectHideFlags: 0

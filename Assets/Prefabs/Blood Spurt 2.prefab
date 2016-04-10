@@ -44,8 +44,8 @@ MonoBehaviour:
   detonatorControlled: 0
   startSize: 1
   size: 0.27
-  explodeDelayMin: 2
-  explodeDelayMax: 2
+  explodeDelayMin: 0
+  explodeDelayMax: 0
   startDuration: 2
   duration: 1
   timeScale: 1
