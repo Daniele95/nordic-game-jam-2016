@@ -41,9 +41,9 @@ public class AngelKontrol2 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		for (int i = 0; i < Scripts.Length; ++i) {
-			Scripts[i] = (AngelBehavior)Angels[i].transform.gameObject.GetComponent (typeof(AngelBehavior));
-		}
+		//for (int i = 0; i < Scripts.Length; ++i) {
+		//	Scripts[i] = (AngelBehavior)Angels[i].transform.gameObject.GetComponent (typeof(AngelBehavior));
+		//}
 
 		Sel_Active_1 ();
 		Sel_Active_2 ();
