@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     public AudioClip[] AudioClips = new AudioClip[3];
     [SerializeField]
+    public Animator Anim = new Animator();
+    [SerializeField]
     private List<GameObject> ammoShow = new List<GameObject>();
     private int ammo = 3;
     private Vector3 lastAim;
@@ -96,6 +98,8 @@ public class PlayerMovement : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Joystick4Button3))
                 InputE = true;
         }
+
+        Anim.SetBool("Attack", false);
 
         if ((Input.GetKeyDown(KeyCode.W) || InputX) && grounded) {
             body.velocity = new Vector3(body.velocity.x, JumpForce, body.velocity.z);
@@ -189,6 +193,8 @@ public class PlayerMovement : MonoBehaviour {
     void Shoot() {
         if (ammo <= 0)
             return;
+
+        Anim.SetBool("Attack", true);
 
         GameObject g = Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z) + new Vector3(Input.GetAxisRaw("Hor" + ControllerID), -Input.GetAxisRaw("Ver" + ControllerID), 0).normalized * .9f, Quaternion.identity) as GameObject;
 
