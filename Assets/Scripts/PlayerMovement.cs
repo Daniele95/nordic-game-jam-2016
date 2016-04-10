@@ -23,6 +23,10 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private GameObject Kabbuuum;
     [SerializeField]
+    private GameObject Blood;
+    [SerializeField]
+    private GameObject SpawnPAr;
+    [SerializeField]
     private float ProjectileSpeed;
     [SerializeField]
     private float speedHor;
@@ -158,9 +162,13 @@ public class PlayerMovement : MonoBehaviour {
             if (collision.gameObject.tag == "wisp4")
 				PlayerStats.Statistics.P4S++;
 
+            Instantiate(Blood, transform.position, Quaternion.identity);
+
             Die();
 
             UpdateAmmoCount();
+
+            Instantiate(SpawnPAr, transform.position, Quaternion.identity);
 
         }
     }

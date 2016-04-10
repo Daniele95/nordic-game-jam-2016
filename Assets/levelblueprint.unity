@@ -959,6 +959,10 @@ Prefab:
       propertyPath: Hit
       value: 
       objectReference: {fileID: 727340719}
+    - target: {fileID: 11494182, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
+      propertyPath: Blood
+      value: 
+      objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9dadcfb75db98f449bfb097987e611bf, type: 2}
   m_IsPrefabParent: 0
@@ -1408,6 +1412,10 @@ Prefab:
       propertyPath: Hit
       value: 
       objectReference: {fileID: 1053038642}
+    - target: {fileID: 11492016, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
+      propertyPath: Blood
+      value: 
+      objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c442ef45dd105a48a0e73b2111c8b18, type: 2}
   m_IsPrefabParent: 0
@@ -1613,6 +1621,10 @@ Prefab:
       propertyPath: Hit
       value: 
       objectReference: {fileID: 1016762048}
+    - target: {fileID: 11493504, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
+      propertyPath: Blood
+      value: 
+      objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f06ff11d662423443b54cc39a6d40210, type: 2}
   m_IsPrefabParent: 0
@@ -1715,6 +1727,10 @@ Prefab:
       propertyPath: Hit
       value: 
       objectReference: {fileID: 985213354}
+    - target: {fileID: 11415504, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
+      propertyPath: Blood
+      value: 
+      objectReference: {fileID: 121022, guid: 38c3e22512d657e4488f71ff8669e138, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b456a35c98791646a36e52e170aea03, type: 2}
   m_IsPrefabParent: 0
