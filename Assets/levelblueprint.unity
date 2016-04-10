@@ -532,7 +532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &194132886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -545,10 +545,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 640737302}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194132887
 MonoBehaviour:
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5315,6 +5315,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RemaningTime: 300
   TimeRemaining: {fileID: 2045593761}
+  EndGame: {fileID: 194132887}
+  transition_time: 0
+  end_game_time: 0
   P1S: 0
   P2S: 0
   P3S: 0
