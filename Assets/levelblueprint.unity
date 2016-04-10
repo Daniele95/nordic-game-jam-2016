@@ -133,7 +133,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: ca1b126908f050f49ac0bf6c5c734e56, type: 2}
+  - {fileID: 2100000, guid: 7d36fa48a2a7604449e98093852ff3e8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2902,7 +2902,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24326212, guid: 0ed1ffc3366cf54468f737beb8090a6c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: b56d3bb61b510e54fbac09f104eae436, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2981,7 +2981,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24326212, guid: 0ed1ffc3366cf54468f737beb8090a6c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: dab3ccfd60e6c474380153c5ff97a2f2, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3108,7 +3108,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24326212, guid: 0ed1ffc3366cf54468f737beb8090a6c,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 18abe747cd5f70548814680039df5733, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
