@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class PlayerStats {
+public class PlayerStats : MonoBehaviour {
 	public static PlayerStats Statistics = new PlayerStats();
 
     public float RemaningTime;
-	public Canvas UsedCanv;
+	public Text TimeRemaining;
 
     public int P1S = 0;
     public int P2S = 0;
@@ -16,7 +18,11 @@ public class PlayerStats {
 	void Update()
 	{
 		RemaningTime -= Time.deltaTime;
-		if (RemaningTime <= 0.0f) {
+		int showing = (int) Mathf.Round (RemaningTime);
+		TimeRemaining.text = showing.ToString();
+		if (RemaningTime < 0.0f) {
+			SceneManager.LoadScene ( "levelblueprint" );
+			
 		}
 	}
 
