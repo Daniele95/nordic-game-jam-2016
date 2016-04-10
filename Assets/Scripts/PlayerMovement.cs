@@ -142,6 +142,8 @@ public class PlayerMovement : MonoBehaviour {
             EmptyObject.transform.Rotate(0,0, angle);
             RotateAround other = (RotateAround)ammoShow[i].GetComponent(typeof(RotateAround));
             other.init(transform);
+            ammoShow[i].transform.rotation = EmptyObject.transform.rotation;
+            ammoShow[i].transform.Rotate(0,0,5*ammo);
         }
 
     }
