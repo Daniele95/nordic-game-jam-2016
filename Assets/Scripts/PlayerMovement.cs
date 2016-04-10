@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private int StartAmmo = 3;
     [SerializeField]
-    public AudioClip[] AudioClips = new AudioClip[3];
+    public AudioSource Hit;
     [SerializeField]
     public Animator Anim = new Animator();
     [SerializeField]
@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour {
         gameObject.tag = "player" + ControllerID;
         UpdateAmmoCount();
         lastAim = new Vector3(1,0,0);
-        Wisp.RandomAudioClips = AudioClips;
     }
 	
 	void Update () {
@@ -180,7 +179,7 @@ public class PlayerMovement : MonoBehaviour {
     public void Die() {
         transform.position = SpawnPoints[Random.Range(0,SpawnPoints.Length)];
         ammo = StartAmmo;
-        CameraShaker.Instance.ShakeOnce(1.5f, 1.2f, 0.2f, 0.4f);
+        CameraShaker.Instance.ShakeOnce(1.8f, 1.4f, 0.2f, 0.4f);
         UpdateAmmoCount();
     }
 
@@ -211,7 +210,7 @@ public class PlayerMovement : MonoBehaviour {
         //g.transform.LookAt(transform.position + transform.forward * 5);
         Wisp other = (Wisp)g.GetComponent(typeof(Wisp));
         other.setColor(ControllerID);
-        other.setNW(NeutrualWisp, Kabbuuum);
+        other.setNW(NeutrualWisp, Kabbuuum, Hit);
         ammo--;
         UpdateAmmoCount();
     }

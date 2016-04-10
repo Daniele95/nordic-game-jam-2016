@@ -10,8 +10,6 @@ public class Wisp : MonoBehaviour {
     AudioSource audio;
     GameObject Booom;
 
-    public static AudioClip[] RandomAudioClips = new AudioClip[3];
-
     void Awake () {
         MeshRenderer gameObjectRenderer = gameObject.GetComponent<MeshRenderer>();
 
@@ -59,10 +57,11 @@ public class Wisp : MonoBehaviour {
         }
     }
 
-    public void setNW(GameObject g, GameObject buum)
+    public void setNW(GameObject g, GameObject buum, AudioSource hitsound)
     {
         NeutrualWisp = g;
         Booom = buum;
+        audio = hitsound;
     }
 
     void OnTriggerEnter(Collider collision)
@@ -71,13 +70,12 @@ public class Wisp : MonoBehaviour {
         if (collision.gameObject.tag == "player" + color)
             return;
 
-        AudioClip[] sounds = new AudioClip[3];
-        RandomAudioClips.CopyTo(sounds, 0);
+
+        AudioSource a = audio;
+        if(a.clip.isReadyToPlay)
+            a.Play();
 
         CameraShaker.Instance.ShakeOnce(0.8f, 1.4f, 0.2f, 0.4f);
-
-        SoundManager_01 asd = new SoundManager_01();
-        //asd.PlayRandomSound(0.85f, 1.15f, 0.7f, 1.3f, RandomAudioClips);
 
         Instantiate(Booom, transform.position, Quaternion.identity);
 
